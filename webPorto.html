@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yahya Abdurrahman | Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: '#0f172a'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .marquee {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .marquee__content {
+      display: flex;
+      gap: 3rem;
+      min-width: 100%;
+      animation: marquee-scroll 25s linear infinite;
+    }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-700 font-body transition-colors duration-300 dark:bg-slate-900 dark:text-slate-200">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 border-b relative bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
+    <a href="/" class="font-heading text-xl text-primary dark:text-slate-100">Portofolio</a>
+    <nav class="space-x-6 text-sm">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#experience" class="hover:underline">Experience</a>
+      <a href="#skills" class="hover:underline">Skills</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+    <button onclick="toggleDark()" class="px-4 py-2 border rounded-md text-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+      🌙 / ☀️
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  <div class="flex mb-16 mt-0 md:mt-14 justify-center md:justify-center md:pr-12">
+    <img src="profil.png"
+         alt="Yahya Abdurrahman"
+         class="w-80 h-80 object-cover rounded-full shadow-lg border dark:border-slate-700">
+  </div>
+  <div>
+    <h2 class="font-heading text-4xl md:text-5xl text-primary dark:text-slate-100 mb-6">
+        Yahya Abdurrahman
+    </h2>
+
+    <p class="max-w-2xl text-lg text-slate-600 dark:text-slate-300 mb-16">
+        Undergraduate Informatics student at Universitas Sebelas Maret with interests in backend development,
+        automation, DevOps, and artificial intelligence.
+    </p>
+
+    <div class="mt-8 space-x-4">
+        <a href="https://github.com/yyyaahya" target="_blank" class="px-6 py-3 border rounded-md text-sm hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+        <a href="https://www.linkedin.com/in/y444hya" target="_blank" class="px-6 py-3 bg-primary text-white border rounded-md text-sm hover:opacity-90">LinkedIn</a>
+        <a href="https://www.instagram.com/y444hya/" target="_blank" class="px-6 py-3 border rounded-md text-sm hover:bg-slate-100 dark:hover:bg-slate-800">Instagram</a>
+  </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="max-w-6xl mx-auto px-6 py-24">
+  <h3 class="font-heading text-2xl text-primary dark:text-slate-100 mb-6">About Me</h3>
+  <p class="leading-relaxed max-w-3xl">
+    I am an undergraduate Informatics student at Sebelas Maret University focusing on building strong foundations
+    in software engineering. I work with Laravel, Python, Docker, and cloud platforms to build reliable,
+    maintainable systems while continuously improving my skills in data and machine learning.
+  </p>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="bg-slate-50 dark:bg-slate-800 py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h3 class="font-heading text-2xl text-primary dark:text-slate-100 mb-10">Experience</h3>
+    <div class="space-y-8">
+      <div>
+        <h4 class="font-medium text-lg">DevOps Engineer at <strong>PT. Pegadaian</strong></h4>
+        <p class="text-sm mt-1 text-slate-600 dark:text-slate-300">Involved in supporting DevOps and infrastructure-related activities, including environment setup,
+            application deployment, and basic CI/CD workflows. Assisted in containerizing applications using Docker,
+            managing cloud resources, and monitoring application performance to ensure system reliability.
+            Collaborated with development teams to improve deployment efficiency and automation processes.</p>
+      </div>
+      <div>
+        <h4 class="font-medium text-lg">Laravel Developer at <strong>PT. Winnicode Garuda Indonesia</strong></h4>
+        <p class="text-sm mt-1 text-slate-600 dark:text-slate-300">Worked as a Laravel Developer focusing on backend development for web-based applications.
+            Responsible for implementing application features, building RESTful APIs, managing databases,
+            and maintaining clean MVC architecture. Collaborated with frontend developers and participated
+            in debugging, optimization, and feature enhancement processes.</p>
+      </div>
+      <div>
+        <h4 class="font-medium text-lg">Machine Learning Cohort at <strong>Bangkit Academy</strong></h4>
+        <p class="text-sm mt-1 text-slate-600 dark:text-slate-300">Selected as a Machine Learning cohort in Bangkit Academy, a program led by Google, Gojek, Tokopedia,
+            and Traveloka. Learned fundamental and applied machine learning concepts including data preprocessing,
+            supervised learning, and deep learning using TensorFlow. Participated in hands-on projects,
+            model training, evaluation, and capstone development with a multidisciplinary team.</p>
+      </div>
+      <div>
+        <h4 class="font-medium text-lg">Wordpress Developer at <strong>PRASASTI (Keluarga Mahasiswa Sukoharjo Sebelas Maret University)</strong></h4>
+        <p class="text-sm mt-1 text-slate-600 dark:text-slate-300">Worked as a WordPress Developer using Elementor to build and customize a competition registration website.
+            Responsible for designing registration forms, managing dynamic content, and integrating webhook-based
+            workflows to connect form submissions with external systems (Zeplin) for data handling and coordination.
+            Ensured usability, responsiveness, and smooth registration flow for participants.</p>
+      </div><div>
+        <h4 class="font-medium text-lg">Staff Fundraising at <strong>Himpunan Mahasiswa Informatika UNS</strong></h4>
+        <p class="text-sm mt-1 text-slate-600 dark:text-slate-300">Actively involved in fundraising activities by coordinating sponsorships, managing proposals,
+            and communicating with external partners. Contributed to planning and executing events,
+            while developing teamwork, communication, and organizational skills alongside technical studies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h3 class="font-heading text-2xl text-primary dark:text-slate-100 mb-10">Skills</h3>
+
+    <!-- Logos -->
+    <div class="relative w-full overflow-hidden border rounded-xl py-6 bg-slate-50 dark:bg-slate-800 mb-12">
+      <div class="marquee">
+        <div class="marquee__content">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" class="h-12" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="h-12"/>
+            </div>
+      </div>
+    </div>
+
+    <!-- Skill List -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 dark:text-slate-300 mb-6">
+        <div>
+            <h4 class="font-medium text-lg text-primary mb-3 dark:text-slate-200 mb-2">Backend & Web Development</h4>
+            <ul class="space-y-2 text-slate-600 text-sm dark:text-slate-300 mb-2">
+                <li>• Laravel (MVC, Blade, REST API)</li>
+                <li>• WordPress (Elementor, Form & Webhook Integration)</li>
+                <li>• Node.js (Basic API & Automation)</li>
+                <li>• Authentication & Authorization</li>
+                <li>• MySQL / Database Design</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-medium text-lg text-primary mb-3 dark:text-slate-200 mb-2">DevOps & Cloud</h4>
+            <ul class="space-y-2 text-slate-600 text-sm dark:text-slate-300 mb-2">
+                <li>• Linux Server & CLI</li>
+                <li>• Docker & Containerization</li>
+                <li>• CI/CD Fundamentals</li>
+                <li>• Google Cloud Platform (Compute, IAM)</li>
+                <li>• Deployment & Monitoring</li>
+            </ul>
+        </div>  
+        <div>
+            <h4 class="font-medium text-lg text-primary mb-3 dark:text-slate-200 mb-2">Data & Machine Learning</h4>
+            <ul class="space-y-2 text-slate-600 text-sm dark:text-slate-300 mb-2">
+                <li>• Python (Data Processing & Automation)</li>
+                <li>• Pandas, NumPy, Matplotlib</li>
+                <li>• TensorFlow & CNN Basics</li>
+                <li>• Image Classification</li>
+                <li>• Model Evaluation</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-medium text-lg text-primary mb-3 dark:text-slate-200 mb-2">Professional Skills</h4>
+            <ul class="space-y-2 text-slate-600 text-sm dark:text-slate-300 mb-2">
+                <li>• Problem Solving</li>
+                <li>• Team Collaboration</li>
+                <li>• Technical Documentation</li>
+                <li>• Time Management</li>
+                <li>• Communication</li>
+            </ul>
+        </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-slate-50 dark:bg-slate-800 py-20 text-center">
+  <h3 class="font-heading text-2xl mb-4">Contact</h3>
+  <p class="mb-6 text-slate-600 dark:text-slate-300">Open for collaboration and opportunities.</p>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yahyaab444@gmail.com"
+    target="_blank"
+    class="inline-block px-8 py-3 border rounded-md
+           hover:bg-slate-100 dark:hover:bg-slate-700
+           transition">📧 Email Me</a>
+</section>
+
+<!-- Footer -->
+<footer class="py-6 text-center text-sm text-slate-500">
+  © 2026 Yahya Abdurrahman
+</footer>
+
+<script>
+  function toggleDark() {
+    document.documentElement.classList.toggle('dark');
+    localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  }
+  if (localStorage.theme === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+</script>
+
+</body>
+</html>
